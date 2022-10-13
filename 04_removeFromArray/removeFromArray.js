@@ -1,7 +1,6 @@
-const numbers = [1, 2, 3, 4]
-const removeFromArray = function() {
-    numbers.splice(2,1);
-	return numbers;
+const removeFromArray = function(...args) {
+    const array = args[0]
+    return array.filter(item => !args.includes(item))
 };
 
 // Do not edit below this line
