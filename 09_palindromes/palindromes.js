@@ -1,15 +1,7 @@
-const palindromes = function (str) {
-    const lowerString = str.toLowerCase();
-    const string = lowerString.replace(/[^\w]|_/g,"");
-    const arrayValues = string.split('');
-    const reverseArrayValues = arrayValues.reverse();
-    const reverseString = reverseArrayValues.join('');
-    if (string == reverseString) {
-        return true;
-    } else {
-        return false;
-    }
-};
-
+function palindromes(str) {
+	const string = str.toLowerCase().replace(/[^\w]/g, '');
+	const revString = string.split('').reverse().join('');
+	return (string === revString);
+}
 // Do not edit below this line
 module.exports = palindromes;
